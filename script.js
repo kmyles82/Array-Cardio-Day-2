@@ -19,13 +19,20 @@ const people = [
   // Array.prototype.some() // is at least one person 19 or older?
 
 //Method # 1
-  const isAdult = people.some(function (person) {
+//   const isAdult = people.some(function (person) {
+//     const currentYear = (new Date()).getFullYear();
+//     if (currentYear - person.year >= 19){
+//         return true;
+//     }
+// })
+// console.log({ isAdult })
+
+//Method #2
+const isAdult = people.some(function (person) {
     const currentYear = (new Date()).getFullYear();
-    if (currentYear - person.year >= 19){
-        return true;
-    }
+    return currentYear - person.year >= 19;
 })
-console.log({ isAdult })
+console.log(isAdult
 
 
   // Array.prototype.every() // is everyone 19 or older?
